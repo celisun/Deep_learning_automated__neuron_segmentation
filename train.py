@@ -918,6 +918,6 @@ print('START TRAINING  ...')
 print(time.time())
 print('ResNet50. 33% 30deg lr50')
 train = train_model(model, criterion, optimizer, lr_scheduler=piecewise_scheduler, num_epochs=num_epochs)
-
+ 
 
 
