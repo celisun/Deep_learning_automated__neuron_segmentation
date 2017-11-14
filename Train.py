@@ -340,19 +340,8 @@ class ConvNet(nn.Module):
         x = self.pool(x)
         print "pool 4:      " + str(x.data.size())
 
-        #x = F.relu(self.conv9(x))
-        # print "conv 7:      " + str(x.data.size())
-        #x = F.relu(self.conv10(x))
-        # print "conv 8:      " + str(x.data.size())
-        #x = self.pool(x)
-        # print "pool 4:      " + str(x.data.size())
-
         x = x.view(-1, 2*2*256)
         x = F.relu(self.linear1(x))
-        #x = nn.functional.dropout(x)
-
-        #x =  F.relu(self.linear2(x))
-        #x = F.dropout(x)
 
         x = F.relu(self.linear3(x))
         x = F.relu(self.linear4(x))
