@@ -5,7 +5,9 @@ import torch.legacy.nn as L
 
 
 class DeepResNet101(nn.Module):
+
     """using bottle-neck building block """
+
 
     def __init__(self, D_out, kernel=7, padding=3):
         super(DeepResNet101, self).__init__()
@@ -64,15 +66,17 @@ class DeepResNet101(nn.Module):
         x = self.linear2(x)
         x = self.linear3(x)
 
-
-
-
         return x
 
 
 
+
+
 class DeepResNet50(nn.Module):
+
     """using bottle-neck building block """
+
+
 
     def __init__(self, D_out, kernel=7, padding=3):   #=============== conv window size 5/22 9:24pm
         super(DeepResNet50, self).__init__()
@@ -139,7 +143,7 @@ class DeepResNet50(nn.Module):
         return x
 
 
-
+# stack of 3 layers providing shortcuts
 def residualLayer3(input, conv2d1, conv2d2, conv2d3, norm2d1, norm2d2, inChannels, hiddenChannels, outChannels, stride=1):
     net = conv2d1(input)  # 1x1
     net = norm2d1(net)
