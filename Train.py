@@ -283,20 +283,7 @@ print "Load num of batches: train " + str(len(emdset_loaders['train'])) + \
 
 print ('done')
 print ('')
-
-
-#  debug
-#for phase in ['train', 'val']:
-#    for i, data in enumerate(emdset_loaders[phase]):
-#        if i == 0:
-#           inputs, labels = data
-#           print phase
-#           print inputs.size()
-#           print labels.size()
-#           break
-
-
-
+ 
 
 
 
