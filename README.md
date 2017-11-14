@@ -1,4 +1,4 @@
-# CREMIchallenge2017_segmentation_task
+# CREMIchallenge2017/ segmentation task
 Electron Microscopy Images, Neuron Segmentation Task. https://cremi.org 
 
 Using residual network method. reference literature https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks
