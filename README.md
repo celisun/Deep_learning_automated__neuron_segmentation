@@ -23,5 +23,5 @@ classification results at 100 epoch:
 
 - The boundary pixels from other organels in neurons should be avoided. They might be easily and falsely treated as target neuron boundaries but are actually not.
   
-- the raw is originally a 3D image of size 125*1250*1250. I treated each layer in deapth 125 as an independent sample. But in later stages, the correlation between pixels at the third dimension should be addressed. 
+- the raw is originally a 3D image of size 125 * 1250 * 1250. I treated each layer in deapth 125 as an independent sample. But in later stages, the correlation between pixels at the third dimension should be addressed. 
 
