@@ -12,7 +12,7 @@ see main training script: train.py
 <img src="https://github.com/celisun/cremi/blob/master/6p.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Filtered%20Mask.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Visualize%20Boundary.png" width="600">
-
+<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/rot.png" width="600">
 
 
 
