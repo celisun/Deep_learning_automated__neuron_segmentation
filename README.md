@@ -19,7 +19,7 @@ classification results at 100 epoch:
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Visualize%20Boundary.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/rot.png" width="600">
 
-### Not yet solved prolems:
+### Problems not yet solved:
 
 - The boundary pixels from other organels in neurons should be avoided. They might be easily and falsely treated as target neuron boundaries but are actually not.
   
