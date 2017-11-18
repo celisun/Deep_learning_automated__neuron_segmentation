@@ -3,7 +3,7 @@ Tentative experiments of electron microscopy neuron images: Neuron Segmentation 
 
 
 #### Experiments restuls and visualization: 
-(classification: ~acc inception: 98.68%, augmented* 98.88%):
+(classification at 100 epoch: ~acc inception: 98.68%, augmented* 98.88%):
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/loss.png" width="500">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc.png" width="500">
