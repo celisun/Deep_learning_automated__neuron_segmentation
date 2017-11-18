@@ -10,7 +10,7 @@ Tentative experiments of electron microscopy neuron images: Neuron Segmentation 
 <img src="https://github.com/celisun/cremi/blob/master/6p.png" width="600">
 
 #### Approaches:
-- I treated the segmentation task as a boundary/nonboundary classification task, using 2-way sofmax for the output of my network.
+- In this tentative experiments, I treated the segmentation task as a boundary/nonboundary classification task, using 2-way sofmax for the output of my network.
 - Used residual network method. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks).
 - Sample selection from raw: only green and purple area will be selected for training batches, dilated boundary yellow area will be avoided.  
 - Different random rotation techniques. In my experiment, rand+/-60 to 50% of samples in each batch performs the best.
