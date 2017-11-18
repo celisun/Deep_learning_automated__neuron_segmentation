@@ -1,7 +1,5 @@
 # CREMIchallenge2017\ Neuron Image Segmentation Task
-Electron Microscopy Images, Neuron Segmentation Task. https://cremi.org 
-
-Tentative experiments.
+Tentative experiments of electron microscopy neuron images: Neuron Segmentation Task. (see at: https://cremi.org, leaderboard see: https://cremi.org/leaderboard/)
 
 
 ##### Nueron Boundary Prediction task, statistical restuls and visualization: 
