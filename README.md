@@ -1,9 +1,11 @@
 # CREMIchallenge2017\ Neuron Image Segmentation Task
 Electron Microscopy Images, Neuron Segmentation Task. https://cremi.org 
 
+Tentative experiments.
 
 
-##### Nueron Boundary Prediction task, statistical restuls and visualization (with ~acc inception: 98.68%, augmented 98.88%):
+##### Nueron Boundary Prediction task, statistical restuls and visualization: 
+(with ~acc inception: 98.68%, augmented 98.88%):
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/loss.png" width="500">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc.png" width="500">
