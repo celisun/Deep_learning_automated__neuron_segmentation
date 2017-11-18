@@ -11,7 +11,9 @@ Tentative experiments of electron microscopy neuron images: Neuron Segmentation 
 
 #### Approaches: 
   - Used residual network method. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks).
+  
   - Sample selection from raw: only green and purple area will be selected for training batches, dilated boundary yellow area will be avoided.
+  
   - Different random rotation techniques. In my experiment, rand+/-60 to 50% of samples in each batch performs the best.
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Filtered%20Mask.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Visualize%20Boundary.png" width="600">
