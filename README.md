@@ -21,7 +21,7 @@ It was found in the preliminary experiments that using a 5-7-5 window for the th
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/res%20window.png" width="300">
 
-- Selectively choose training samples from raw (see figure below): the yellow area **dilated boundary** pixels were avoided to be chosen, only green and purple (true boudary, background) pixels will be selected into training batches,.  
+- Selectively choose training samples from raw (see figure below): the yellow area **X3 dilated boundary** pixels were avoided to be chosen, only green and purple (true boudary, background) pixels will be selected into training batches,.  
 - **Random rotation techniques**: various augmentation approches were explored, including rand rotations of +/-60, rand +/- 30, on 33.33%, 50% of samples in each batc. rand +/- 60 deg on 50% of samples (see figure below) was found to perform the best so far.
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Filtered%20Mask.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Visualize%20Boundary.png" width="600">
