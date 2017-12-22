@@ -9,8 +9,8 @@ best classification results at 100 epoch:
 
 ~loss: inception: 0.0364, augmented*: 0.0298
 
-<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/loss.png" width="500">
-<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc.png" width="500">
+<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/err.png" width="500">
+<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc .png" width="500">
 <img src="https://github.com/celisun/cremi/blob/master/6p.png" width="600">
 
 ### Approaches:
@@ -18,6 +18,9 @@ best classification results at 100 epoch:
 - Reproduced and used **residual network method**. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks). This has been giving me a great boost in classificaiton results. 
 
 It was found in the preliminary experiments that using a 5-7-5 window for the three conv layers in each bottleneck block of residual net on 127*127 sample size outformed by a large margin the originally proposed 1-3-1 structure, so the experiments reported above were all trained with the 5-7-5 window.The position of batch normalization and dropout layer in the block was changed as well to further optimize classification results.
+
+<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/res%20window.png" width="300">
+
 - Selectively choose training samples from raw (see figure below): the yellow area **dilated boundary** pixels were avoided to be chosen, only green and purple (true boudary, background) pixels will be selected into training batches,.  
 - **Random rotation techniques**: various augmentation approches were explored, including rand rotations of +/-60, rand +/- 30, on 33.33%, 50% of samples in each batc. rand +/- 60 deg on 50% of samples (see figure below) was found to perform the best so far.
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Filtered%20Mask.png" width="600">
