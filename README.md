@@ -9,7 +9,7 @@ best classification results at 100 epoch:
 
 ~loss: inception: 0.0364, augmented*: 0.0298
 
-<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/err.png" width="500">
+<img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/loss.png" width="500">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc.png" width="500">
 <img src="https://github.com/celisun/cremi/blob/master/6p.png" width="600">
 
