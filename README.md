@@ -26,7 +26,7 @@ It was found in the preliminary experiments that using a 5-7-5 window for the th
 
 ### Problems not yet solved:
 
-- The boundary pixels from other organels (intracellular organells) should be avoided. They might be easily and falsely treated as target neuron boundaries but are actually not.
+- The boundary pixels from other organels (intracellular organels) should be avoided. They might be easily and falsely treated as target neuron boundaries but are actually not.
   
 - the raw is originally a 3D image of size 125 * 1250 * 1250. I treated each layer in deapth 125 as an independent sample. But in later stages, the correlation between pixels at the third dimension should be addressed. 
 
