@@ -15,7 +15,7 @@ best classification results at 100 epoch:
 
 ### Approaches:
 - In this tentative experiments, I treated the segmentation task as a boundary/nonboundary classification task, using 2-way sofmax for the output of my network.
-- Reproduced and used residual network method. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks). This has been giving me a great boost in classificaiton results.
+- Reproduced and used residual network method. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks). This has been giving me a great boost in classificaiton results. However, I found in the preliminary experiments that training with a 5-7-5 window for the three conv layers in each block for a sample size of 127*127 outform the originally proposed 1-3-1 by a large margin(95.8% v.s. 94.5% at epoch 5), so the experiments reported above are all based on my 5-7-5 net.
 - Sample selection from raw: only green and purple area will be selected for training batches, dilated boundary yellow area will be avoided.  
 - Different random rotation techniques. In my experiment, rand+/-60 to 50% of samples in each batch performs the best.
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Filtered%20Mask.png" width="600">
