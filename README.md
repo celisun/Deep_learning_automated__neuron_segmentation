@@ -33,3 +33,9 @@ It was found in the preliminary experiments (see plot below) that using a 5-7-5 
   
 - the raw is originally a 3D image of size 125 * 1250 * 1250. I treated each layer in deapth 125 as an independent sample. But in later stages, the correlation between pixels at the third dimension should be addressed. 
 
+## Dependencies
+
+* python2
+* pytorch
+* numpy
+* matplotlib
