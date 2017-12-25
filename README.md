@@ -2,7 +2,7 @@
 Tentative experiments on electron microscopy images: Neuron Segmentation Task. (see at: https://cremi.org, see leaderboard at: https://cremi.org/leaderboard/)
 
 
-### Experiment restuls and visualization: 
+### Experiment restuls 
 best classification results at 100 epoch:
 
 ~acc: inception: 98.68%, augmented* 98.88%; 
@@ -13,7 +13,7 @@ best classification results at 100 epoch:
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc.png" width="500">
 <img src="https://github.com/celisun/cremi/blob/master/6p.png" width="600">
 
-### Approaches:
+### Approaches 
 - For this task, I trained a 2 way classifier to classify the central pixel in 127*127 sample as boudary and non-boundary. The 2-way sofmax layer was applied before the output of the network.
 - Reproduced and used **residual network method**. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks). This has been giving me a great boost in classificaiton results. 
 
@@ -27,7 +27,7 @@ best classification results at 100 epoch:
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Visualize%20Boundary.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/rot.png" width="600">
 
-### Problems not yet solved/ Future work:
+### Future work 
 
 - The neighbor area of the boundaries was avoided in this experiment, however the boundary pixels from other organels (intracellular organels) should also be avoided. These pixels could be easily treated as target neuron boundaries which are actually not. The approach to address this challenge can be to pre-train a network to recognize these intracellular boundaries and filter out these pixels when creating training batches for the segmentation task.
   
