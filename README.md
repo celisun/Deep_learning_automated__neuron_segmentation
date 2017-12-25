@@ -2,7 +2,7 @@
 Tentative experiments on electron microscopy images: Neuron Segmentation Task. (see at: https://cremi.org, see leaderboard at: https://cremi.org/leaderboard/)
 
 
-### Experiment restuls 
+## Experiment restuls 
 best classification results at 100 epoch:
 
 ~acc: inception: 98.68%, augmented* 98.88%; 
