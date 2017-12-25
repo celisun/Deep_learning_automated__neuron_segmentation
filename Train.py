@@ -80,8 +80,6 @@ def mask_filtered(raw, neuron_ids):
 
     return(numpy array): mask of shape 125,1250,1250
     """
-
-
     print ''
     print ''
     print 'building mask-5X from raw dataset...'
@@ -114,8 +112,6 @@ def mask_filtered(raw, neuron_ids):
     print 'saved'
 
 
-
-
 def check_boundary(pixel, x, y, z, neuron_ids):
     """
     Check if a pixel at position (x,y,z) is labeled
@@ -123,8 +119,6 @@ def check_boundary(pixel, x, y, z, neuron_ids):
 
     return(boolean): boundary
     """
-
-
     max_z = neuron_ids.data.shape[2] - 1
     max_y = neuron_ids.data.shape[1] - 1
     a = neuron_ids.data[x, y, z - 1] if z > 0 else pixel
@@ -143,7 +137,6 @@ def check_boundary(pixel, x, y, z, neuron_ids):
             boundary = True
 
     return boundary
-
 
 
 # Seed a random number generator
@@ -171,7 +164,6 @@ def random_rotation(inputs):
     angles = random.uniform(-30., 30.) 
     if indices == 0:
         rotate(inputs, angles, output = new_ims, order=1, reshape=False)
-
 
     return new_ims
 
@@ -255,20 +247,9 @@ class NeuronSegmenDataset(Dataset):
                     sample = (raw_batch, 1)
 
                     break
-
         return sample
 
 
-
-#data_transforms = {
- #   'train': transforms.Compose([
- #       transform.
-
-  #  ]),
- #   'val': transforms.Compose({
-
- #   }),
-#} 
 batch_size = 100
 emdset_seg = {x: NeuronSegmenDataset(raw, neuron_ids, mask, x, transform=random_rotation)
               for x in ['train', 'val']}
@@ -284,11 +265,6 @@ print "Load num of batches: train " + str(len(emdset_loaders['train'])) + \
 print ('done')
 print ('')
  
-
-
-
-
-
 
 class ConvNet(nn.Module):
     def __init__(self, D_out, kernel= 3, window =2, padding=1):
@@ -310,8 +286,6 @@ class ConvNet(nn.Module):
         self.linear4 = nn.Linear(128, D_out)
 
     def forward(self, x):
-
-
         x = F.relu(self.conv1(x))
         print "conv 1:      " + str(x.data.size())
         x = F.relu(self.conv2(x))
@@ -347,8 +321,6 @@ class ConvNet(nn.Module):
         x = F.relu(self.linear4(x))
 
         return x
-
-
 
 
 
@@ -396,9 +368,6 @@ def train_model (model, criterion, optimizer, lr_scheduler=None, num_epochs=100)
             running_accuracy = 0.
             total = 0
 
-
-
-
             # iterate over each batch
             for i, data in enumerate(emdset_loaders[phase]):
                 inputs, labels = data
@@ -413,8 +382,6 @@ def train_model (model, criterion, optimizer, lr_scheduler=None, num_epochs=100)
                 optimizer.zero_grad()   # clean gradients in buffer
 
                 outputs = model(inputs)
-                # (batch_split, batch_merge) = voi(outputs.numpy(), labels.numpy(), ignore_groundtruth = [0])
-                # batch_rand = adapted_rand(outputs.numpy(), labels.numpy())
                 _, predicted = torch.max(outputs.data, 1)
                 loss = criterion(outputs, labels)
 
@@ -425,19 +392,7 @@ def train_model (model, criterion, optimizer, lr_scheduler=None, num_epochs=100)
 
 
                 running_loss += loss.data[0]
-                #total += labels.size(0)
                 running_accuracy += (predicted == labels.data).sum()
-                #if phase == 'val':
-                #    print running_accuracy
-                #    print total * 1.
-                # train_voi_split[i] += batch_split
-                # train_voi_merge[i] += batch_merge
-                # train_rand[i] += batch_rand
-
-
-                if (i+1) == 300:
-                    #print str(i+1) + 'done'
-                    print '---'
 
                 # visualize random patches
                 visualize_pred = True
@@ -457,15 +412,10 @@ def train_model (model, criterion, optimizer, lr_scheduler=None, num_epochs=100)
                     fig.savefig('6p.png')
                     print 'done and saved to 6p.png'
 
-
-
-
+			
             # normalize by number of batches
             running_loss /= (i + 1)
             running_accuracy = 100 * running_accuracy / dset_sizes[phase]
-            # train_voi_split /= len(emdset_loader)
-            # train_voi_merge /= len(emdset_loader)
-            # train_rand /= len(emdset_loader)
 
             # print statistics
             if epoch % 1 == 0:
@@ -476,20 +426,7 @@ def train_model (model, criterion, optimizer, lr_scheduler=None, num_epochs=100)
                 # print "\tvoi merge   : " + str(train_voi_merge)
                 # print "\tadapted RAND: " + str(train_rand)
 
-
-
-            # print training time after each epoch
-            #if phase == 'val':
-	           # train_time = time.time()
-	            #time_elapsed = train_time - since
-	           # print('epoch complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
-	           # since = train_time
-            
-            
-
-
-
-    # Visualize the model. raw, labeled, predicted
+    # Visualize the model. raw, labeled, predicted  (optional)
     visualize = False
     if visualize:
         print('')
@@ -502,16 +439,12 @@ def train_model (model, criterion, optimizer, lr_scheduler=None, num_epochs=100)
 
 
 
-
-
 def visualize_model(model, i = 80, s  = 300):
     """ Args:
         model: model
         i: depth of the raw image to visualize
         s: crop the 1250*1250 image to the size of s*s
     """
-
-
     fig = plt.figure(figsize=(15,6))
 
     ax_ori = fig.add_subplot(1,3,1)
@@ -537,9 +470,7 @@ def visualize_model(model, i = 80, s  = 300):
             input = Variable(input.cuda())
         else:
             input = Variable(input)
-
-
-
+	
         outputs = model(input)
         _, pred = torch.max(outputs.data, 1)
         pred = pred.cpu().numpy()
@@ -554,10 +485,8 @@ def visualize_model(model, i = 80, s  = 300):
             print '2/3 done'
 
     print preds.reshape(s, s)
-
     ax_pred.imshow(preds.reshape((s,s)))
     ax_pred.set_title('predicted')
-
 
     ax_lab.axis('off')
     ax_ori.axis('off')
@@ -573,7 +502,7 @@ def visualize_model(model, i = 80, s  = 300):
 
 
 
-
+#-----------------------------------------------------------------------
 num_classes = 2
 num_epochs = 100
 #model = ConvNet(num_classes )
