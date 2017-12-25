@@ -35,7 +35,7 @@ best classification results at 100 epoch:
 
 ## Dependencies
 
-* python2
+* python 
 * pytorch
 * numpy
 * matplotlib
