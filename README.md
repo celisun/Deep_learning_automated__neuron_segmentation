@@ -17,7 +17,7 @@ best classification results at 100 epoch:
 - For this task, I trained a 2 way classifier to classify the central pixel in 127*127 sample as boudary and non-boundary. The 2-way sofmax layer was applied before the output of the network.
 - Reproduced and used **residual network method**. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks). This has been giving me a great boost in classificaiton results. 
 
-It was found in the preliminary experiments (see plot below) that using a 5-7-5 window for the three conv layers in the bottleneck block of residual net (combined with a 127*127 sample size, green line) outformed the originally proposed 1-3-1 structure (gray line) by a large margin, so the experiments reported above were all trained with the 5-7-5 window.The position of batch normalization and dropout layer in the block was also changed to further optimize classification results.
+ (see plot below) It was found in preliminary experiments that using a 5-7-5 window for the three conv layers in the bottleneck block of residual net (training on 127*127 sample size, green line) outformed the originally proposed 1-3-1 structure (gray line) by a large margin, so experiments reported above were all trained with the 5-7-5. The position of batch normalization and dropout layer in the block was also changed.
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/res%20window.png" width="300">
 
@@ -27,11 +27,11 @@ It was found in the preliminary experiments (see plot below) that using a 5-7-5 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/*Visualize%20Boundary.png" width="600">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/rot.png" width="600">
 
-### Problems not yet solved:
+### Problems not yet solved/ Future work:
 
-- The boundary pixels from other organels (intracellular organels) should be avoided. They might be easily and falsely treated as target neuron boundaries but are actually not.
+- The neighbor area of the boundaries was avoided in this experiment, however the boundary pixels from other organels (intracellular organels) should also be avoided. These pixels could be easily treated as target neuron boundaries which are actually not. The approach to address this challenge can be to pre-train a network to recognize these intracellular boundaries and filter out these pixels when creating training batches for the segmentation task.
   
-- the raw is originally a 3D image of size 125 * 1250 * 1250. I treated each layer in deapth 125 as an independent sample. But in later stages, the correlation between pixels at the third dimension should be addressed. 
+- the raw is originally a 3D image of size 125 * 1250 * 1250. I started by treating each layer in deapth 125 as an independent sample and trained my network with images in 2D sections. However, in later stages of experiments (which i was not able to do due to the time limit of my project), the third deimension should be considered to address the correlation between the neuron pixels at depth.
 
 ## Dependencies
 
