@@ -1,4 +1,4 @@
-# CREMIchallenge2017\ Neuron Image Segmentation Task
+# CREMIchallenge2017 - Neuron Image Segmentation Task
 This is a tentative experiments on solving automated neuron segmentation task using deep learing methods. See the original challenge post at: https://cremi.org, and leaderboard at: https://cremi.org/leaderboard/
 
 
