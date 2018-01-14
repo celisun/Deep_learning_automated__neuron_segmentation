@@ -5,11 +5,11 @@ See the original challenge post at: https://cremi.org, and leaderboard at: https
 
 
 ## Experiment Restuls 
-best classification results at 100 epoch:
+best at 100 epoch:
 
-~acc: inception: 98.68%, augmented* 98.88%; 
+Acc:  98.88%; 
 
-~loss: inception: 0.0364, augmented*: 0.0298
+Loss:  0.0298
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/loss.png" width="500">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/acc.png" width="500">
