@@ -19,7 +19,7 @@ Loss:  0.0298
 - For this task, I trained a 2 way classifier to classify the central pixel in 127*127 sample as boudary and non-boundary. The 2-way sofmax layer was applied before the output of the network.
 - Reproduced and used **residual network method**. (original: https://arxiv.org/abs/1512.03385, implementation on github: https://github.com/gcr/torch-residual-networks). This has been giving me a great boost in classificaiton results. 
 
- (see plot below) It was found in preliminary experiments that using a 5-7-5 window for the three conv layers in the bottleneck block of residual net (training on 127*127 sample size, green line) outformed the originally proposed 1-3-1 structure (gray line) by a large margin, so experiments reported above were all trained with the 5-7-5. The position of batch normalization and dropout layer in the block was also changed.
+   - (see plot below) It was found in preliminary experiments that using a 5-7-5 window for the three conv layers in the bottleneck block of residual net (training on 127*127 sample size, green line) outformed the originally proposed 1-3-1 structure (gray line) by a large margin, so experiments reported above were all trained with the 5-7-5. The position of batch normalization and dropout layer in the block was also changed.
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/res%20window.png" width="300">
 
