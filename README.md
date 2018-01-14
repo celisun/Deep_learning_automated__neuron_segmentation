@@ -1,8 +1,8 @@
 # CREMIchallenge2017\ Neuron Image Segmentation Task
-Tentative experiments on electron microscopy images: Neuron Segmentation Task. (see at: https://cremi.org, see leaderboard at: https://cremi.org/leaderboard/)
+This is a tentative experiments on solving automated neuron segmentation task using deep learing methods. See the original challenge post at: https://cremi.org, and leaderboard at: https://cremi.org/leaderboard/
 
 
-## Experiment restuls 
+## Experiment Restuls 
 best classification results at 100 epoch:
 
 ~acc: inception: 98.68%, augmented* 98.88%; 
