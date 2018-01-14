@@ -5,7 +5,7 @@ See the original challenge post at: https://cremi.org, and leaderboard at: https
 
 
 ## Experiment Restuls 
-best at 100 epoch:
+Best at 100 epoch:
 
 Acc:  98.88%; 
 
