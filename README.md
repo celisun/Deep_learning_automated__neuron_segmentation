@@ -6,7 +6,7 @@ See the original challenge post at: https://cremi.org, and leaderboard at: https
 Use Train.py file o train the models.
 
 
-## Experiment Restuls 
+## Experimental Restuls 
 Best at 100 epoch:
 
 Acc:  98.88%; 
