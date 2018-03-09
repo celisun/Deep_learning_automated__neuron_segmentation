@@ -9,9 +9,9 @@ Use Train.py file o train the models.
 ## Experimental Restuls 
 Best at 100 epoch:
 
-Acc:  98.88%; 
+**Acc:  98.88%;**
 
-Loss:  0.0298
+**Loss:  0.0298**
 
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_neuron_segmentation/master/img/loss.png" width="500">
 <img src="https://raw.githubusercontent.com/celisun/CREMIchallenge2017_segmentation_task/master/img/acc.png" width="500">
