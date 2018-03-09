@@ -3,6 +3,8 @@ This is a tentative experiments on solving automated neuron segmentation task us
 
 See the original challenge post at: https://cremi.org, and leaderboard at: https://cremi.org/leaderboard/
 
+Use Train.py file o train the models.
+
 
 ## Experiment Restuls 
 Best at 100 epoch:
