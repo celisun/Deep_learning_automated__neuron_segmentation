@@ -1,5 +1,5 @@
-# CREMIchallenge2017 - Neuron Image Segmentation Task (with residual networks)
-This is a tentative experiments on solving automated neuron segmentation task using deep learing methods. 
+# CREMIchallenge2017 - Neuron Image Segmentation Task 
+This is a tentative experiments on solving automated neuron segmentation task using deep learing methods, residual networks. 
 
 See the original challenge post at: https://cremi.org, and leaderboard at: https://cremi.org/leaderboard/
 
